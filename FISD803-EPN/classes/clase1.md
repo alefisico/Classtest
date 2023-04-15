@@ -13,17 +13,15 @@ kernelspec:
   name: python3
 markdown_extensions:
       - admonition
-fontsize: 40pt
 ---
 
 # Clase Demostrativa - Introducción a Sistemas Complejos
+
 ## Tema: Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.
 
-<center>
+Autor: _Alejandro Gómez Espinosa_
+Fecha: 2023-04-14
 
-_Alejandro Gómez Espinosa_
-
-2023-04-14
 
 </center>
 
