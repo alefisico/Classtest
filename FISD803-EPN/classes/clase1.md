@@ -100,6 +100,11 @@ $$y_1 = y_0 + \Delta t f( x_0, y_0) = 1 + 0.025 (1) = 2.025$$
 Veamos este ejemplo gráficamente:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
 
+``````{seealso}
+Hay muchos recursos online sobre este método, aquí unas sugerencias:
+ * [Euler method - Jeffrey Chasnov](https://www.youtube.com/watch?v=WMQ2Cac4sqw)
+``````
+
 #### Método de Runge Kutta
 
 Este es el método más utilizado en resolver ecuaciones diferenciales. Existen métodos más sofisticados pero Runge Kutta sigue siendo el método general. En esta parte vamos a describir el método de cuarto orden (RK4) porque vamos a calcular *cuatro* pendientes ($m_k, n_k, p_k, q_k$) y sumarlas con un promedio ponderado para obtener el siguiente paso, así:
@@ -113,7 +118,11 @@ con $t_{k+1} = t_k + \Delta t$. Cada pendiente se obtiene de esta manera:
  * $$m_k = f(t_k, x_k)$$ (método de Euler)
  * $$n_k = f(t_k + \frac{\Delta t}{2}, x_k + m_k \frac{\Delta t}{2}) $$
  * $$p_k = f(t_k + \frac{\Delta t}{2}, x_k + n_k \frac{\Delta t}{2}) $$
- * $$q_k = f(t_{k+1}, x_k + p_k \Delta t)$$ 
+ * $$q_k = f(t_{k+1}, x_k + p_k \Delta t)$$
+
+ ![Runge Kutta method demostration](../images/clase1/Runge-Kutta_slopes.svg)
+
+
 ```{note}
 My directive content
 ```
