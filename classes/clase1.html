@@ -432,7 +432,7 @@ document.write(`
 <span class="eqno">(1)<a class="headerlink" href="#equation-eulereq" title="Permalink to this equation">#</a></span>\[x_{k+1} = x_k + \Delta t f(t_k, x_k)\]</div>
 <p>que es el valor aproximado de la solución de la ecuación al tiempo <span class="math notranslate nohighlight">\(t_n\)</span>.</p>
 <div class="proof example admonition" id="euler-example">
-<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Consideremos la siguiente ecuación diferencial:</p>
 <div class="math notranslate nohighlight">
@@ -461,22 +461,28 @@ document.write(`
 <div class="math notranslate nohighlight" id="equation-rungekutta1">
 <span class="eqno">(2)<a class="headerlink" href="#equation-rungekutta1" title="Permalink to this equation">#</a></span>\[x_{k+1} = x_k + \left( \frac{m_k + 2n_k + 2p_k + q_k}{6} \right) \Delta t\]</div>
 <p>con <span class="math notranslate nohighlight">\(t_{k+1} = t_k + \Delta t\)</span>. Cada pendiente se obtiene de esta manera:</p>
-<ul>
-<li><div class="math notranslate nohighlight" id="equation-metodo-de-euler">
-<span class="eqno">(3)<a class="headerlink" href="#equation-metodo-de-euler" title="Permalink to this equation">#</a></span>\[m_k = f(t_k, x_k)\]</div>
-</li>
-<li><div class="math notranslate nohighlight">
-\[n_k = f(t_k + \frac{\Delta t}{2}, x_k + m_k \frac{\Delta t}{2}) \]</div>
-</li>
-<li><div class="math notranslate nohighlight">
-\[p_k = f(t_k + \frac{\Delta t}{2}, x_k + n_k \frac{\Delta t}{2}) \]</div>
-</li>
-<li><div class="math notranslate nohighlight">
-\[q_k = f(t_{k+1}, x_k + p_k \Delta t)\]</div>
-</li>
-</ul>
-<p><img alt="Runge Kutta method demostration" src="../_images/Runge-Kutta_slopes.svg" /></p>
-<div class="admonition note">
+<div class="math notranslate nohighlight" id="equation-rungekutta2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-rungekutta2" title="Permalink to this equation">#</a></span>\[m_k = f(t_k, x_k) \; \text{(método de Euler)}\]</div>
+<div class="math notranslate nohighlight" id="equation-rungekutta3">
+<span class="eqno">(4)<a class="headerlink" href="#equation-rungekutta3" title="Permalink to this equation">#</a></span>\[n_k = f(t_k + \frac{\Delta t}{2}, x_k + m_k \frac{\Delta t}{2})\]</div>
+<div class="math notranslate nohighlight" id="equation-rungekutta4">
+<span class="eqno">(5)<a class="headerlink" href="#equation-rungekutta4" title="Permalink to this equation">#</a></span>\[p_k = f(t_k + \frac{\Delta t}{2}, x_k + n_k \frac{\Delta t}{2})\]</div>
+<div class="math notranslate nohighlight" id="equation-rungekutta5">
+<span class="eqno">(6)<a class="headerlink" href="#equation-rungekutta5" title="Permalink to this equation">#</a></span>\[q_k = f(t_{k+1}, x_k + p_k \Delta t)$$\]</div>
+<p>Gráficamente podemos observar: (<em>Nota: Aqui <span class="math notranslate nohighlight">\(x\)</span> se denota como <span class="math notranslate nohighlight">\(y\)</span></em>)
+<img alt="Runge Kutta method demostration" src="../_images/Runge-Kutta_slopes.svg" /></p>
+<div class="proof example admonition" id="euler-example">
+<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
+<section class="example-content" id="proof-content">
+<p>Usemos el mismo ejemplo anterior para ver como se calcula el método de Runge Kutta:</p>
+<div class="math notranslate nohighlight">
+\[f(x, y(x)) = x + y\]</div>
+<div class="math notranslate nohighlight">
+\[f(x_0, y(x_0)) = f(0, 1) = 0 + 1 = 1\]</div>
+<div class="math notranslate nohighlight">
+\[y_1 = y_0 + \Delta t f( x_0, y_0) = 1 + 0.025 (1) = 2.025\]</div>
+</section>
+</div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>My directive content</p>
 </div>
