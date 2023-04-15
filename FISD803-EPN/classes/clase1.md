@@ -67,10 +67,16 @@ La idea general en todos estos métodos es aproximar el resultado de una funció
 
 La idea del método de Euler es simple. Cuando la forma específica del resultado no es conocida, su condición inicial si lo es ($A_0$). Así, la pendiente de la curva puede ser calculada en el punto $A_0$ de la ecuación diferencial, y de esta manera su línea tangente. Si nos movemos un *paso* por esta tangente podemos encontrar un punto $A_1$ desde donde volvemos a calcular la pendiente.
 
-Notese que la precisión de este método depende del tamaño de este paso. 
+Notese que la precisión de este método depende del tamaño de este paso.
 
 ![Euler method simple demostration](../images/clase1/Euler_method.svg)
 
+````{prf:example}
+:label: euler-example
+
+Pensemos en:
+
+````
 Empecemos con un ejemplo simple:
 
 \begingroup
