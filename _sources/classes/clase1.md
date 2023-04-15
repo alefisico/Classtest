@@ -59,8 +59,17 @@ Son formas de describir el *paso del tiempo* en todos los puntos del espacio $\m
 
 ### Métodos de Runge Kutta
 
+Estos son una familia de métodos *iterativos* en análisis numérico que nos permiten resolver de forma numérica ecuaciones diferenciales. A pesar de su simplicidad, estos métodos son muy precisos y se ha demostrado que se tienen un buen comportamiento en muchos problemas.
 
-Estos son una familia de métodos *iterativos* en análisis numérico que nos permiten resolver de forma numérica ecuaciones diferenciales. Apesar de su simplicidad, estos métodos son muy precisos y se ha demostrado que se tienen un buen comportamiento en muchas problemas.
+La idea general en todos estos métodos es aproximar el resultado de una función/curva desconocida conociendo las condiciones iniciales. Empecemos con el método más sencillo de resolver ecuaciones diferenciales, conocido como el método de Euler.
+
+#### Método de Euler
+
+La idea del método de Euler es simple. Cuando la forma específica del resultado no es conocida, su condición inicial si lo es ($A_0$). Así, la pendiente de la curva puede ser calculada en el punto $A_0$ de la ecuación diferencial, y de esta manera su línea tangente. Si nos movemos un *paso* por esta tangente podemos encontrar un punto $A_1$ desde donde volvemos a calcular la pendiente.
+
+Notese que la precisión de este método depende del tamaño de este paso. 
+
+![Euler method simple demostration](../images/clase1/Euler_method.svg)
 
 Empecemos con un ejemplo simple:
 

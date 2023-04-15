@@ -366,7 +366,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnicas-de-simulacion-de-sistemas-dinamicos-runge-kutta-con-paso-adaptivo">Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-recap">Quick recap</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-euler">Método de Euler</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -415,7 +418,13 @@ document.write(`
 </section>
 <section id="metodos-de-runge-kutta">
 <h3>Métodos de Runge Kutta<a class="headerlink" href="#metodos-de-runge-kutta" title="Permalink to this heading">#</a></h3>
-<p>Estos son una familia de métodos <em>iterativos</em> en análisis numérico que nos permiten resolver de forma numérica ecuaciones diferenciales. Apesar de su simplicidad, estos métodos son muy precisos y se ha demostrado que se tienen un buen comportamiento en muchas problemas.</p>
+<p>Estos son una familia de métodos <em>iterativos</em> en análisis numérico que nos permiten resolver de forma numérica ecuaciones diferenciales. A pesar de su simplicidad, estos métodos son muy precisos y se ha demostrado que se tienen un buen comportamiento en muchos problemas.</p>
+<p>La idea general en todos estos métodos es aproximar el resultado de una función/curva desconocida conociendo las condiciones iniciales. Empecemos con el método más sencillo de resolver ecuaciones diferenciales, conocido como el método de Euler.</p>
+<section id="metodo-de-euler">
+<h4>Método de Euler<a class="headerlink" href="#metodo-de-euler" title="Permalink to this heading">#</a></h4>
+<p>La idea del método de Euler es simple. Cuando la forma específica del resultado no es conocida, su condición inicial si lo es (<span class="math notranslate nohighlight">\(A_0\)</span>). Así, la pendiente de la curva puede ser calculada en el punto <span class="math notranslate nohighlight">\(A_0\)</span> de la ecuación diferencial, y de esta manera su línea tangente. Si nos movemos un <em>paso</em> por esta tangente podemos encontrar un punto <span class="math notranslate nohighlight">\(A_1\)</span> desde donde volvemos a calcular la pendiente.</p>
+<p>Notese que la precisión de este método depende del tamaño de este paso.</p>
+<p><img alt="Euler method simple demostration" src="../_images/Euler_method.svg" /></p>
 <p>Empecemos con un ejemplo simple:</p>
 <p>\begingroup
 \fontfamily{ppl}\fontsize{20}{22}\selectfont
@@ -425,6 +434,7 @@ $<span class="math notranslate nohighlight">\( \frac{dx}{dz} \)</span>$
 <p class="admonition-title">Note</p>
 <p>My directive content</p>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -498,7 +508,10 @@ $<span class="math notranslate nohighlight">\( \frac{dx}{dz} \)</span>$
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnicas-de-simulacion-de-sistemas-dinamicos-runge-kutta-con-paso-adaptivo">Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-recap">Quick recap</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-euler">Método de Euler</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
