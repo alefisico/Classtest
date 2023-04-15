@@ -143,11 +143,23 @@ Usemos el mismo ejemplo anterior para ver como se calcula el método de Runge Ku
 
  $$f(x, y(x)) = x + y$$
 
- $$f(x_0, y(x_0)) = f(0, 1) = 0 + 1 = 1$$
+ $$m_k = f(x_0, y(x_0)) = f(0, 1) = 0 + 1 = 1$$
 
- $$y_1 = y_0 + \Delta t f( x_0, y_0) = 1 + 0.025 (1) = 2.025$$
+ $$n_k = f(y_0 + \frac{\Delta t}{2}, x_0 + m_k \frac{\Delta t}{2}) = f( 1 + 0.025/2, 0 + 1(0.025/2) ) = f (1.0125, 0.0125) = 1.0125 + 0.0125 = 1.025$$
+
+$$p_k = f(y_0 + \frac{\Delta t}{2}, x_0 + n_k \frac{\Delta t}{2}) = f(1.0125, 0 + 1.025(0.0125)) = 1.02531$$
+
+$$q_k = f(y_{1}, x_0 + p_k \Delta t) = f(y_{0}+ \Ðelta t, x_0 + p_k \Delta t) = f(1.025, 1.02531(0.025)) = 1.0506$$
+
+Finalmente:
+
+$$x_{1} = x_0 + \left( \frac{m_k + 2n_k + 2p_k + q_k}{6} \right) \Delta t = 0 + \left( \frac{1 + 2(1.025) + 2(1.02531) + 1.0506}{6} \right) 0.025 = 0.02563$$
 
  ````
+ Veamos este ejemplo gráficamente:
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
+
+#### Método de Runge Kutta con paso adaptivo
 
 
 
