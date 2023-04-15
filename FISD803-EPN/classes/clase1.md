@@ -73,7 +73,10 @@ Notese que la precisión de este método depende del tamaño de este paso.
 
 Matemáticamente, dados las condiciones iniciales $t_0$ y $y(t_0)$ y conociendo que la derivada de $y$ es una función de $t$ y $y$, o $\frac{dy}{dt} = f(t, y(t))$, este método comienza con $y_0 = y(t_0)$ y un tamaño del paso $h$. Se puede definir tambien que $t_n = t_0 +nh$ o equivalentemente $t_{n+1} = t_n +h$, donde $n$ es el número del paso.  Así, para un paso se tiene que:
 
-$$ y_{n+1} = y_n + h f(t_n, y_n)$$
+```{math}
+:label: eulereq
+y_{n+1} = y_n + h f(t_n, y_n)
+```
 
 que es el valor aproximado de la solución de la ecuación al tiempo $t_n$.
 
@@ -86,13 +89,17 @@ $$ \frac{dy}{dx} = ( x + y ) $$
 
 y las condiciones iniciales $x_o = 0$, $y_0 = 1$, $h = 0.025$. Entonces:
 
-$$ f(x, y(x)) = x + y $$
+$$
+f(x, y(x)) = x + y
+f(0, 1) = 0 + 1 = 1
+y_1 = y_0 + h f( x_0, y_0) = 1 + 0.025 (1) = 2.025
+$$
 
 
 ````
 
-Veamos este ejemplo graficamente:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb]
+Veamos este ejemplo gráficamente:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
 
 Empecemos con un ejemplo simple:
 
