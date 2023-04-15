@@ -115,12 +115,40 @@ x_{k+1} = x_k + \left( \frac{m_k + 2n_k + 2p_k + q_k}{6} \right) \Delta t
 ```
 con $t_{k+1} = t_k + \Delta t$. Cada pendiente se obtiene de esta manera:
 
- * $$m_k = f(t_k, x_k)$$ (método de Euler)
- * $$n_k = f(t_k + \frac{\Delta t}{2}, x_k + m_k \frac{\Delta t}{2}) $$
- * $$p_k = f(t_k + \frac{\Delta t}{2}, x_k + n_k \frac{\Delta t}{2}) $$
- * $$q_k = f(t_{k+1}, x_k + p_k \Delta t)$$
+```{math}
+:label: rungekutta2
+m_k = f(t_k, x_k) \; \text{(método de Euler)}
+```
+```{math}
+:label: rungekutta3
+n_k = f(t_k + \frac{\Delta t}{2}, x_k + m_k \frac{\Delta t}{2})
+```
+```{math}
+:label: rungekutta4
+p_k = f(t_k + \frac{\Delta t}{2}, x_k + n_k \frac{\Delta t}{2})
+```
+```{math}
+:label: rungekutta5
+q_k = f(t_{k+1}, x_k + p_k \Delta t)$$
+```
 
+Gráficamente podemos observar: (_Nota: Aqui $x$ se denota como $y$_)
  ![Runge Kutta method demostration](../images/clase1/Runge-Kutta_slopes.svg)
+
+
+ ````{prf:example}
+ :label: euler-example
+
+Usemos el mismo ejemplo anterior para ver como se calcula el método de Runge Kutta:
+
+ $$f(x, y(x)) = x + y$$
+
+ $$f(x_0, y(x_0)) = f(0, 1) = 0 + 1 = 1$$
+
+ $$y_1 = y_0 + \Delta t f( x_0, y_0) = 1 + 0.025 (1) = 2.025$$
+
+ ````
+
 
 
 ```{note}
