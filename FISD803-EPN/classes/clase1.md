@@ -19,7 +19,7 @@ markdown_extensions:
 
 ## Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.
 
-``````{see also} Qué vamos a ver en esta clase?
+``````{seealso} Qué vamos a ver en esta clase?
 Test
 ``````
 
@@ -28,14 +28,21 @@ Test
 Test
 ``````
 
+### Quick recap
+
+Vamos a recordar algunas definiciones que serán útiles en esta clase:
+
+  * **Sistemas No lineales**: Son sistemas que no pueden ser descritos por sistemas de ecuaciones lineales.
+  * **Linearidad**: Para que una función satisfaga el principio de linealidad debe tener las siguientes propiedades:
+    * Aditividad: $$\textstyle f(x + y) = f(x) + f(y);$$
+    * Homogeneidad: $$f(\alpha x) = \alpha f(x)$$
+
 
 
 ### Métodos de Runge Kutta
 
 
-```
-Estos son una familia de métodos *iterativos* en análisis numérico que nos permiten resolver de forma numérica ecuaciones diferenciales.
-```
+Estos son una familia de métodos *iterativos* en análisis numérico que nos permiten resolver de forma numérica ecuaciones diferenciales. Apesar de su simplicidad, estos métodos son muy precisos y se ha demostrado que se tienen un buen comportamiento en muchas problemas.
 
 Empecemos con un ejemplo simple:
 
