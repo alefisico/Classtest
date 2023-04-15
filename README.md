@@ -1,6 +1,6 @@
-# Mecanica Newtoniana
+# Introducción a Sistemas Complejos
 
-Material de clase para el curso de Mecanica Newtoniana (FISD344-2023A) de la Escuela Politécnica Nacional. 
+Material de clase para el curso de Introducción a Sistemas Complejos (FISD803) de la Escuela Politécnica Nacional, Quito - Ecuador. 
 
 <!-- ## Usage
 
