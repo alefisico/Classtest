@@ -15,13 +15,9 @@ markdown_extensions:
       - admonition
 ---
 
-# Clase Demostrativa - Introducción a Sistemas Complejos
+# Clase Demostrativa
 
-## Tema: Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.
-
-Autor: _Alejandro Gómez Espinosa_
-Fecha: 2023-04-14
-
+## Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.
 
 ``````{admonition} Objetivos
 :class: tip
