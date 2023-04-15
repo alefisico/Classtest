@@ -492,12 +492,30 @@ document.write(`
 </section>
 </div><p>Veamos este ejemplo gráficamente:
 <a class="reference external" href="https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Hay muchos recursos online sobre este método, aquí unas sugerencias:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=8_PnCSsA_BQ">Runge Kutta method - Let’s Code Physics</a></p></li>
+</ul>
+</div>
 </section>
 <section id="metodo-de-runge-kutta-con-paso-adaptivo">
 <h4>Método de Runge Kutta con paso adaptivo<a class="headerlink" href="#metodo-de-runge-kutta-con-paso-adaptivo" title="Permalink to this heading">#</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>My directive content</p>
+<p>De las explicaciones anteriores puede surgir una pregunta: como saber cual es el más óptimo paso? Puede que utilicemos un valor muy pequeño lo que creara cálculos innecesarios o muy grande que creará posibles errores. Para esto se ha creado el método de Runge Kutta con pasos adaptivos.</p>
+<p>Por ejemplo, se puede calcular el valor del siguiente paso usando <span class="math notranslate nohighlight">\(\Delta t\)</span> y <span class="math notranslate nohighlight">\(2 \Delta t\)</span>. Si la diferencia entre estos valores es muy pequeña, se puede reemplazar el valor de <span class="math notranslate nohighlight">\(\Delta t\)</span> por <span class="math notranslate nohighlight">\(2 \Delta t\)</span> en el siguiente paso. Si la diferencia es muy grande, se puede optar por calcular el valor con <span class="math notranslate nohighlight">\((\Delta t)/2\)</span> y de la misma manera si el valor es muy grande, se puede reemplazar el valor de <span class="math notranslate nohighlight">\(\Delta t\)</span> para el siguiente paso.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Hay muchos recursos online sobre este método, aquí unas sugerencias:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=JcRsGD2pKlA">Runge Kutta method with adaptive step size - Let’s Code Physics</a></p></li>
+</ul>
+</div>
+<p>Veamos este ejemplo gráficamente:
+<a class="reference external" href="https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tip admonition">
+<p class="admonition-title">Take home message</p>
+<p>Los métodos de Runge Kutta nos permiten calcular analíticamente la solución de ecuaciones diferenciales de una manera muy precisa.</p>
 </div>
 </section>
 </section>
