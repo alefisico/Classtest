@@ -5,7 +5,7 @@
 
 #######################################################################################
 # Book settings
-title                       : USFQ FIS 2702 - Fisica para Ingenierias 2  # The title of the book. Will be placed in the left navbar.
+title                       : Introducción a Sistema Complejos  # The title of the book. Will be placed in the left navbar.
 author                      : Alejandro Gómez Espinosa  # The author of the book
 copyright                   : "2023"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
@@ -26,8 +26,8 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/alefisico/fis2702-Spring2023-USFQ  # Online location of your book
-  path_to_book: fis2702-Spring2023-USFQ # Optional path to your book, relative to the repository root
+  url: https://github.com/alefisico/FISD803-EPN  # Online location of your book
+  path_to_book: FISD803-EPN # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -35,7 +35,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-# 
+#
 # sphinx:
 #   config:
 #     html_extra_path: ['fis2702-Spring2023-USFQ/classes']
