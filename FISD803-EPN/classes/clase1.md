@@ -90,6 +90,10 @@ $$ f(x, y(x)) = x + y $$
 
 
 ````
+
+Veamos este ejemplo graficamente:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb]
+
 Empecemos con un ejemplo simple:
 
 \begingroup
