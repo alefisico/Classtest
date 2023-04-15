@@ -82,7 +82,11 @@ que es el valor aproximado de la solución de la ecuación al tiempo $t_n$.
 
 Consideremos la siguiente ecuación diferencial:
 
-$$ \frac{dy}{dx} = ( x + y + xy) $$
+$$ \frac{dy}{dx} = ( x + y ) $$
+
+y las condiciones iniciales $x_o = 0$, $y_0 = 1$, $h = 0.025$. Entonces:
+
+$$ f(x, y(x)) = x + y $$
 
 
 ````
