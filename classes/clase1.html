@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -425,7 +426,18 @@ document.write(`
 <p>La idea del método de Euler es simple. Cuando la forma específica del resultado no es conocida, su condición inicial si lo es (<span class="math notranslate nohighlight">\(A_0\)</span>). Así, la pendiente de la curva puede ser calculada en el punto <span class="math notranslate nohighlight">\(A_0\)</span> de la ecuación diferencial, y de esta manera su línea tangente. Si nos movemos un <em>paso</em> por esta tangente podemos encontrar un punto <span class="math notranslate nohighlight">\(A_1\)</span> desde donde volvemos a calcular la pendiente.</p>
 <p>Notese que la precisión de este método depende del tamaño de este paso.</p>
 <p><img alt="Euler method simple demostration" src="../_images/Euler_method.svg" /></p>
-<p>Empecemos con un ejemplo simple:</p>
+<p>Matemáticamente, dados las condiciones iniciales <span class="math notranslate nohighlight">\(t_0\)</span> y <span class="math notranslate nohighlight">\(y(t_0)\)</span> y conociendo que la derivada de <span class="math notranslate nohighlight">\(y\)</span> es una función de <span class="math notranslate nohighlight">\(t\)</span> y <span class="math notranslate nohighlight">\(y\)</span>, o <span class="math notranslate nohighlight">\(\frac{dy}{dt} = f(t, y(t))\)</span>, este método comienza con <span class="math notranslate nohighlight">\(y_0 = y(t_0)\)</span> y un tamaño del paso <span class="math notranslate nohighlight">\(h\)</span>. Se puede definir tambien que <span class="math notranslate nohighlight">\(t_n = t_0 +nh\)</span> o equivalentemente <span class="math notranslate nohighlight">\(t_{n+1} = t_n +h\)</span>, donde <span class="math notranslate nohighlight">\(n\)</span> es el número del paso.  Así, para un paso se tiene que:</p>
+<div class="math notranslate nohighlight">
+\[ y_{n+1} = y_n + h f(t_n, y_n)\]</div>
+<p>que es el valor aproximado de la solución de la ecuación al tiempo <span class="math notranslate nohighlight">\(t_n\)</span>.</p>
+<div class="proof example admonition" id="euler-example">
+<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<section class="example-content" id="proof-content">
+<p>Consideremos la siguiente ecuación diferencial:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dy}{dx} = ( x + y + xy) \]</div>
+</section>
+</div><p>Empecemos con un ejemplo simple:</p>
 <p>\begingroup
 \fontfamily{ppl}\fontsize{20}{22}\selectfont
 $<span class="math notranslate nohighlight">\( \frac{dx}{dz} \)</span>$

@@ -67,10 +67,25 @@ La idea general en todos estos métodos es aproximar el resultado de una funció
 
 La idea del método de Euler es simple. Cuando la forma específica del resultado no es conocida, su condición inicial si lo es ($A_0$). Así, la pendiente de la curva puede ser calculada en el punto $A_0$ de la ecuación diferencial, y de esta manera su línea tangente. Si nos movemos un *paso* por esta tangente podemos encontrar un punto $A_1$ desde donde volvemos a calcular la pendiente.
 
-Notese que la precisión de este método depende del tamaño de este paso. 
+Notese que la precisión de este método depende del tamaño de este paso.
 
 ![Euler method simple demostration](../images/clase1/Euler_method.svg)
 
+Matemáticamente, dados las condiciones iniciales $t_0$ y $y(t_0)$ y conociendo que la derivada de $y$ es una función de $t$ y $y$, o $\frac{dy}{dt} = f(t, y(t))$, este método comienza con $y_0 = y(t_0)$ y un tamaño del paso $h$. Se puede definir tambien que $t_n = t_0 +nh$ o equivalentemente $t_{n+1} = t_n +h$, donde $n$ es el número del paso.  Así, para un paso se tiene que:
+
+$$ y_{n+1} = y_n + h f(t_n, y_n)$$
+
+que es el valor aproximado de la solución de la ecuación al tiempo $t_n$.
+
+````{prf:example}
+:label: euler-example
+
+Consideremos la siguiente ecuación diferencial:
+
+$$ \frac{dy}{dx} = ( x + y + xy) $$
+
+
+````
 Empecemos con un ejemplo simple:
 
 \begingroup
