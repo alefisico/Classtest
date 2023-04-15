@@ -21,33 +21,40 @@ markdown_extensions:
 
 ``````{admonition} Qué vamos a ver en esta clase?
 :class: seealso
-Test
+Vamos a aprender formas analíticas de resolver sistemas de ecuaciones en sistemas dinámicos.
 ``````
 
 ``````{admonition} Objetivos
 :class: tip
-Test
+Conocer el método de Runge Kutta para resolver ecuaciones diferenciales en sistemas dinámicos.
 ``````
 
 ### Quick recap
 
 Vamos a recordar algunas definiciones que serán útiles en esta clase:
 
-#### Sistemas No lineales
+``````{admonition} Sistemas No lineales
+:class: note
 
 Son sistemas que no pueden ser descritos por sistemas de ecuaciones lineales. Para sistemas no lineales, no siempre se puede encontrar una solución explicita a un problema con cualquier condición inicial. Es por eso que encontrar una solución analítica a estos problemas no es posible.
+``````
 
-##### Linearidad
+``````{admonition} Linearidad
+:class: note
 
 Para que una función satisfaga el principio de linealidad debe tener las siguientes propiedades:
  * Aditividad: $\textstyle f(x + y) = f(x) + f(y)$
  * Homogeneidad: $f(\alpha x) = \alpha f(x)$
 
 Un sistema descrito por ecuaciones diferenciales no es *lineal* si no es un sistema de ecuaciones que cumplan los requisitos previos.
+``````
 
-##### Sistema dinámico
+
+``````{admonition} Sistema dinámico
+:class: note
 
 Son formas de describir el *paso del tiempo* en todos los puntos del espacio $\mathcal S$, que puede ser por ejemplo el espacio de estados de un sistema físico.
+``````
 
 
 ### Métodos de Runge Kutta
@@ -66,21 +73,3 @@ $$ \frac{dx}{dz} $$
 ```{note}
 My directive content
 ```
-
-</center>
-
----
-
-Quiero tratar de que las clases sean muy interactivas. Es por eso que durante las clases vamos a usar la plataforma [Quizizz](https://quizizz.com)
-
-Esta nos sirve para tomar interactuar con todos ustedes. Cuando vean este logo
-
-![quiz](../images/quizizz.png){width=100px}
-
-__es quizizz time__!
-
-Probemos con https://quizizz.com/admin/presentation/63c95e77651957001d9b6f1c?source=lesson_share
-
----
-
-Slides de esta clase se encuentran [aqui](https://alefisico.github.io/fis2702-Spring2023-USFQ/classes/clase1.html).
