@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Notas generales
+    chapters:
+    - file: codeconduct
+    - file: content
+    - file: biblio
+  - caption: Clases
+    chapters:
+      - file: classes/clase1.md
+      - file: classes/clase2.md
+      - file: classes/clase3.md
+      - file: classes/clase4.md
+      - file: classes/clase5.md
