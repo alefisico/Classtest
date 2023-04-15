@@ -19,18 +19,20 @@ markdown_extensions:
 
 ## Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.
 
+``````{see also} Qué vamos a ver en esta clase?
+Test
+``````
+
 ``````{admonition} Objetivos
 :class: tip
 Test
 ``````
 
-</center>
 
----
 
-# Métodos de Runge Kutta
+### Métodos de Runge Kutta
 
-<center>
+
 ```
 Estos son una familia de métodos *iterativos* en análisis numérico que nos permiten resolver de forma numérica ecuaciones diferenciales.
 ```
