@@ -19,7 +19,8 @@ markdown_extensions:
 
 ## Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.
 
-``````{seealso} Qué vamos a ver en esta clase?
+``````{admonition} Qué vamos a ver en esta clase?
+:class: seealso
 Test
 ``````
 
@@ -32,11 +33,21 @@ Test
 
 Vamos a recordar algunas definiciones que serán útiles en esta clase:
 
-  * **Sistemas No lineales**: Son sistemas que no pueden ser descritos por sistemas de ecuaciones lineales.
-  * **Linearidad**: Para que una función satisfaga el principio de linealidad debe tener las siguientes propiedades:
-    * Aditividad: $$\textstyle f(x + y) = f(x) + f(y);$$
-    * Homogeneidad: $$f(\alpha x) = \alpha f(x)$$
+#### Sistemas No lineales
 
+Son sistemas que no pueden ser descritos por sistemas de ecuaciones lineales. Para sistemas no lineales, no siempre se puede encontrar una solución explicita a un problema con cualquier condición inicial. Es por eso que encontrar una solución analítica a estos problemas no es posible.
+
+##### Linearidad
+
+Para que una función satisfaga el principio de linealidad debe tener las siguientes propiedades:
+ * Aditividad: $\textstyle f(x + y) = f(x) + f(y)$
+ * Homogeneidad: $f(\alpha x) = \alpha f(x)$
+
+Un sistema descrito por ecuaciones diferenciales no es *lineal* si no es un sistema de ecuaciones que cumplan los requisitos previos.
+
+##### Sistema dinámico
+
+Son formas de describir el *paso del tiempo* en todos los puntos del espacio $\mathcal S$, que puede ser por ejemplo el espacio de estados de un sistema físico.
 
 
 ### Métodos de Runge Kutta

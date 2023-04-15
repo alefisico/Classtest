@@ -365,7 +365,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnicas-de-simulacion-de-sistemas-dinamicos-runge-kutta-con-paso-adaptivo">Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-recap">Quick recap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-recap">Quick recap</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-no-lineales">Sistemas No lineales</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#linearidad">Linearidad</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-dinamico">Sistema dinámico</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a></li>
 </ul>
 </li>
@@ -384,10 +391,9 @@ document.write(`
 <h1>Clase Demostrativa<a class="headerlink" href="#clase-demostrativa" title="Permalink to this heading">#</a></h1>
 <section id="tecnicas-de-simulacion-de-sistemas-dinamicos-runge-kutta-con-paso-adaptivo">
 <h2>Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.<a class="headerlink" href="#tecnicas-de-simulacion-de-sistemas-dinamicos-runge-kutta-con-paso-adaptivo" title="Permalink to this heading">#</a></h2>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Qué vamos a ver en esta clase?
-Test</p>
+<div class="seealso admonition">
+<p class="admonition-title">Qué vamos a ver en esta clase?</p>
+<p>Test</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Objetivos</p>
@@ -396,15 +402,23 @@ Test</p>
 <section id="quick-recap">
 <h3>Quick recap<a class="headerlink" href="#quick-recap" title="Permalink to this heading">#</a></h3>
 <p>Vamos a recordar algunas definiciones que serán útiles en esta clase:</p>
+<section id="sistemas-no-lineales">
+<h4>Sistemas No lineales<a class="headerlink" href="#sistemas-no-lineales" title="Permalink to this heading">#</a></h4>
+<p>Son sistemas que no pueden ser descritos por sistemas de ecuaciones lineales. Para sistemas no lineales, no siempre se puede encontrar una solución explicita a un problema con cualquier condición inicial. Es por eso que encontrar una solución analítica a estos problemas no es posible.</p>
+<section id="linearidad">
+<h5>Linearidad<a class="headerlink" href="#linearidad" title="Permalink to this heading">#</a></h5>
+<p>Para que una función satisfaga el principio de linealidad debe tener las siguientes propiedades:</p>
 <ul class="simple">
-<li><p><strong>Sistemas No lineales</strong>: Son sistemas que no pueden ser descritos por sistemas de ecuaciones lineales.</p></li>
-<li><p><strong>Linearidad</strong>: Para que una función satisfaga el principio de linealidad debe tener las siguientes propiedades:</p>
-<ul>
-<li><p>Aditividad: $<span class="math notranslate nohighlight">\(\textstyle f(x + y) = f(x) + f(y);\)</span>$</p></li>
-<li><p>Homogeneidad: $<span class="math notranslate nohighlight">\(f(\alpha x) = \alpha f(x)\)</span>$</p></li>
+<li><p>Aditividad: <span class="math notranslate nohighlight">\(\textstyle f(x + y) = f(x) + f(y)\)</span></p></li>
+<li><p>Homogeneidad: <span class="math notranslate nohighlight">\(f(\alpha x) = \alpha f(x)\)</span></p></li>
 </ul>
-</li>
-</ul>
+<p>Un sistema descrito por ecuaciones diferenciales no es <em>lineal</em> si no es un sistema de ecuaciones que cumplan los requisitos previos.</p>
+</section>
+<section id="sistema-dinamico">
+<h5>Sistema dinámico<a class="headerlink" href="#sistema-dinamico" title="Permalink to this heading">#</a></h5>
+<p>Son formas de describir el <em>paso del tiempo</em> en todos los puntos del espacio <span class="math notranslate nohighlight">\(\mathcal S\)</span>, que puede ser por ejemplo el espacio de estados de un sistema físico.</p>
+</section>
+</section>
 </section>
 <section id="metodos-de-runge-kutta">
 <h3>Métodos de Runge Kutta<a class="headerlink" href="#metodos-de-runge-kutta" title="Permalink to this heading">#</a></h3>
@@ -499,7 +513,14 @@ $<span class="math notranslate nohighlight">\( \frac{dx}{dz} \)</span>$
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnicas-de-simulacion-de-sistemas-dinamicos-runge-kutta-con-paso-adaptivo">Técnicas de simulación de sistemas dinámicos: Runge Kutta con paso adaptivo.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-recap">Quick recap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-recap">Quick recap</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-no-lineales">Sistemas No lineales</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#linearidad">Linearidad</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-dinamico">Sistema dinámico</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a></li>
 </ul>
 </li>
