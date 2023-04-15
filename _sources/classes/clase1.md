@@ -71,11 +71,11 @@ Notese que la precisión de este método depende del tamaño de este paso.
 
 ![Euler method simple demostration](../images/clase1/Euler_method.svg)
 
-Matemáticamente, dados las condiciones iniciales $t_0$ y $y(t_0)$ y conociendo que la derivada de $y$ es una función de $t$ y $y$, o $\frac{dy}{dt} = f(t, y(t))$, este método comienza con $y_0 = y(t_0)$ y un tamaño del paso $h$. Se puede definir tambien que $t_n = t_0 +nh$ o equivalentemente $t_{n+1} = t_n + \Delta t $, donde $n$ es el número del paso.  Así, para un paso se tiene que:
+Matemáticamente, dados las condiciones iniciales $t_0$ y $x(t_0)$ y conociendo que la derivada de $x$ es una función de $t$ y $x$, o $\frac{dx}{dt} = f(t, x(t))$, este método comienza con $x_0 = x(t_0)$ y un tamaño del paso $\Delta t$. Se puede definir también que $t_k = t_0 + k \Delta t$ o equivalentemente $t_{k+1} = t_k + \Delta t $, donde $k$ es el número del paso.  Así, para un paso se tiene que:
 
 ```{math}
 :label: eulereq
-y_{n+1} = y_n + \Delta t f(t_n, y_n)
+x_{k+1} = x_k + \Delta t f(t_k, x_k)
 ```
 
 que es el valor aproximado de la solución de la ecuación al tiempo $t_n$.
@@ -102,7 +102,15 @@ Veamos este ejemplo gráficamente:
 
 #### Método de Runge Kutta
 
-Este es el método más utilizado en resolver ecuaciones diferenciales. Existen métodos más sofisticados pero Runge Kutta sigue siendo el método general. En esta parte vamos a describir el método de cuarto orden (RK4) porque vamos a calcular *cuatro* pendientes y sumarlas con un promedio ponderado.
+Este es el método más utilizado en resolver ecuaciones diferenciales. Existen métodos más sofisticados pero Runge Kutta sigue siendo el método general. En esta parte vamos a describir el método de cuarto orden (RK4) porque vamos a calcular *cuatro* pendientes ($m_k, n_k, p_k, q_k$) y sumarlas con un promedio ponderado para obtener el siguiente paso, así:
+
+```{math}
+:label: rungekutta1
+x_{k+1} = x_k + \left( \frac{m_k + 2n_k + 2p_k + q_k}{6} \right) \Delta t
+```
+y cada pendiente se obtiene de esta manera:
+
+ * $m_k$ se obtiene por el método de Euler $$m_k = f(t_k, x_k)$$
 
 
 ```{note}

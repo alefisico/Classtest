@@ -427,9 +427,9 @@ document.write(`
 <p>La idea del método de Euler es simple. Cuando la forma específica del resultado no es conocida, su condición inicial si lo es (<span class="math notranslate nohighlight">\(A_0\)</span>). Así, la pendiente de la curva puede ser calculada en el punto <span class="math notranslate nohighlight">\(A_0\)</span> de la ecuación diferencial, y de esta manera su línea tangente. Si nos movemos un <em>paso</em> por esta tangente podemos encontrar un punto <span class="math notranslate nohighlight">\(A_1\)</span> desde donde volvemos a calcular la pendiente.</p>
 <p>Notese que la precisión de este método depende del tamaño de este paso.</p>
 <p><img alt="Euler method simple demostration" src="../_images/Euler_method.svg" /></p>
-<p>Matemáticamente, dados las condiciones iniciales <span class="math notranslate nohighlight">\(t_0\)</span> y <span class="math notranslate nohighlight">\(y(t_0)\)</span> y conociendo que la derivada de <span class="math notranslate nohighlight">\(y\)</span> es una función de <span class="math notranslate nohighlight">\(t\)</span> y <span class="math notranslate nohighlight">\(y\)</span>, o <span class="math notranslate nohighlight">\(\frac{dy}{dt} = f(t, y(t))\)</span>, este método comienza con <span class="math notranslate nohighlight">\(y_0 = y(t_0)\)</span> y un tamaño del paso <span class="math notranslate nohighlight">\(h\)</span>. Se puede definir tambien que <span class="math notranslate nohighlight">\(t_n = t_0 +nh\)</span> o equivalentemente <span class="math notranslate nohighlight">\(t_{n+1} = t_n + \Delta t \)</span>, donde <span class="math notranslate nohighlight">\(n\)</span> es el número del paso.  Así, para un paso se tiene que:</p>
+<p>Matemáticamente, dados las condiciones iniciales <span class="math notranslate nohighlight">\(t_0\)</span> y <span class="math notranslate nohighlight">\(x(t_0)\)</span> y conociendo que la derivada de <span class="math notranslate nohighlight">\(x\)</span> es una función de <span class="math notranslate nohighlight">\(t\)</span> y <span class="math notranslate nohighlight">\(x\)</span>, o <span class="math notranslate nohighlight">\(\frac{dx}{dt} = f(t, x(t))\)</span>, este método comienza con <span class="math notranslate nohighlight">\(x_0 = x(t_0)\)</span> y un tamaño del paso <span class="math notranslate nohighlight">\(\Delta t\)</span>. Se puede definir también que <span class="math notranslate nohighlight">\(t_k = t_0 + k \Delta t\)</span> o equivalentemente <span class="math notranslate nohighlight">\(t_{k+1} = t_k + \Delta t \)</span>, donde <span class="math notranslate nohighlight">\(k\)</span> es el número del paso.  Así, para un paso se tiene que:</p>
 <div class="math notranslate nohighlight" id="equation-eulereq">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eulereq" title="Permalink to this equation">#</a></span>\[y_{n+1} = y_n + \Delta t f(t_n, y_n)\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eulereq" title="Permalink to this equation">#</a></span>\[x_{k+1} = x_k + \Delta t f(t_k, x_k)\]</div>
 <p>que es el valor aproximado de la solución de la ecuación al tiempo <span class="math notranslate nohighlight">\(t_n\)</span>.</p>
 <div class="proof example admonition" id="euler-example">
 <p class="admonition-title"><span class="caption-number">Example 1 </span></p>
@@ -449,7 +449,13 @@ y_1 = y_0 + \Delta t f( x_0, y_0) = 1 + 0.025 (1) = 2.025
 </section>
 <section id="metodo-de-runge-kutta">
 <h4>Método de Runge Kutta<a class="headerlink" href="#metodo-de-runge-kutta" title="Permalink to this heading">#</a></h4>
-<p>Este es el método más utilizado en resolver ecuaciones diferenciales. Existen métodos más sofisticados pero Runge Kutta sigue siendo el método general. En esta parte vamos a describir el método de cuarto orden (RK4) porque vamos a calcular <em>cuatro</em> pendientes y sumarlas con un promedio ponderado.</p>
+<p>Este es el método más utilizado en resolver ecuaciones diferenciales. Existen métodos más sofisticados pero Runge Kutta sigue siendo el método general. En esta parte vamos a describir el método de cuarto orden (RK4) porque vamos a calcular <em>cuatro</em> pendientes (<span class="math notranslate nohighlight">\(m_k, n_k, p_k, q_k\)</span>) y sumarlas con un promedio ponderado para obtener el siguiente paso, así:</p>
+<div class="math notranslate nohighlight" id="equation-rungekutta1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-rungekutta1" title="Permalink to this equation">#</a></span>\[x_{k+1} = x_k + \left( \frac{m_k + 2n_k + 2p_k + q_k}{6} \right) \Delta t\]</div>
+<p>y cada pendiente se obtiene de esta manera:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m_k\)</span> se obtiene por el método de Euler $<span class="math notranslate nohighlight">\(m_k = f(t_k, x_k)\)</span>$</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>My directive content</p>
