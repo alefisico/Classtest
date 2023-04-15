@@ -370,6 +370,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-euler">Método de Euler</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-runge-kutta">Método de Runge Kutta</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-runge-kutta-con-paso-adaptivo">Método de Runge Kutta con paso adaptivo</a></li>
 </ul>
 </li>
 </ul>
@@ -478,11 +479,23 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[f(x, y(x)) = x + y\]</div>
 <div class="math notranslate nohighlight">
-\[f(x_0, y(x_0)) = f(0, 1) = 0 + 1 = 1\]</div>
+\[m_k = f(x_0, y(x_0)) = f(0, 1) = 0 + 1 = 1\]</div>
 <div class="math notranslate nohighlight">
-\[y_1 = y_0 + \Delta t f( x_0, y_0) = 1 + 0.025 (1) = 2.025\]</div>
+\[n_k = f(y_0 + \frac{\Delta t}{2}, x_0 + m_k \frac{\Delta t}{2}) = f( 1 + 0.025/2, 0 + 1(0.025/2) ) = f (1.0125, 0.0125) = 1.0125 + 0.0125 = 1.025\]</div>
+<div class="math notranslate nohighlight">
+\[p_k = f(y_0 + \frac{\Delta t}{2}, x_0 + n_k \frac{\Delta t}{2}) = f(1.0125, 0 + 1.025(0.0125)) = 1.02531\]</div>
+<div class="math notranslate nohighlight">
+\[q_k = f(y_{1}, x_0 + p_k \Delta t) = f(y_{0}+ \Ðelta t, x_0 + p_k \Delta t) = f(1.025, 1.02531(0.025)) = 1.0506\]</div>
+<p>Finalmente:</p>
+<div class="math notranslate nohighlight">
+\[x_{1} = x_0 + \left( \frac{m_k + 2n_k + 2p_k + q_k}{6} \right) \Delta t = 0 + \left( \frac{1 + 2(1.025) + 2(1.02531) + 1.0506}{6} \right) 0.025 = 0.02563\]</div>
 </section>
-</div><div class="admonition note">
+</div><p>Veamos este ejemplo gráficamente:
+<a class="reference external" href="https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+</section>
+<section id="metodo-de-runge-kutta-con-paso-adaptivo">
+<h4>Método de Runge Kutta con paso adaptivo<a class="headerlink" href="#metodo-de-runge-kutta-con-paso-adaptivo" title="Permalink to this heading">#</a></h4>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>My directive content</p>
 </div>
@@ -563,6 +576,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-runge-kutta">Métodos de Runge Kutta</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-euler">Método de Euler</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-runge-kutta">Método de Runge Kutta</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-runge-kutta-con-paso-adaptivo">Método de Runge Kutta con paso adaptivo</a></li>
 </ul>
 </li>
 </ul>
