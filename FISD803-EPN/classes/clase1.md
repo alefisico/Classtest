@@ -149,7 +149,7 @@ Usemos el mismo ejemplo anterior para ver como se calcula el método de Runge Ku
 
 $$p_k = f(y_0 + \frac{\Delta t}{2}, x_0 + n_k \frac{\Delta t}{2}) = f(1.0125, 0 + 1.025(0.0125)) = 1.02531$$
 
-$$q_k = f(y_{1}, x_0 + p_k \Delta t) = f(y_{0}+ \Ðelta t, x_0 + p_k \Delta t) = f(1.025, 1.02531(0.025)) = 1.0506$$
+$$q_k = f(y_{1}, x_0 + p_k \Delta t) = f(y_{0}+ \Delta t, x_0 + p_k \Delta t) = f(1.025, 1.02531(0.025)) = 1.0506$$
 
 Finalmente:
 
@@ -170,16 +170,22 @@ De las explicaciones anteriores puede surgir una pregunta: como saber cual es el
 
 Por ejemplo, se puede calcular el valor del siguiente paso usando $\Delta t$ y $2 \Delta t$. Si la diferencia entre estos valores es muy pequeña, se puede reemplazar el valor de $\Delta t$ por $2 \Delta t$ en el siguiente paso. Si la diferencia es muy grande, se puede optar por calcular el valor con $(\Delta t)/2$ y de la misma manera si el valor es muy grande, se puede reemplazar el valor de $\Delta t$ para el siguiente paso.
 
+Veamos este ejemplo gráficamente:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
 
 ``````{seealso}
 Hay muchos recursos online sobre este método, aquí unas sugerencias:
  * [Runge Kutta method with adaptive step size - Let's Code Physics](https://www.youtube.com/watch?v=JcRsGD2pKlA)
 ``````
 
-Veamos este ejemplo gráficamente:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
+---
 
 ``````{admonition} Take home message
 :class: tip
-Los métodos de Runge Kutta nos permiten calcular analíticamente la solución de ecuaciones diferenciales de una manera muy precisa. 
+Los métodos de Runge Kutta nos permiten calcular analíticamente la solución de ecuaciones diferenciales de una manera muy precisa.
+``````
+
+``````{admonition} Material de lectura para la siguiente clase
+:class: warning
+Libro 1, pag 4-5.
 ``````
