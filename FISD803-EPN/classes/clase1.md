@@ -159,10 +159,27 @@ $$x_{1} = x_0 + \left( \frac{m_k + 2n_k + 2p_k + q_k}{6} \right) \Delta t = 0 + 
  Veamos este ejemplo gráficamente:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
 
+ ``````{seealso}
+ Hay muchos recursos online sobre este método, aquí unas sugerencias:
+  * [Runge Kutta method - Let's Code Physics](https://www.youtube.com/watch?v=8_PnCSsA_BQ)
+ ``````
+
 #### Método de Runge Kutta con paso adaptivo
 
+De las explicaciones anteriores puede surgir una pregunta: como saber cual es el más óptimo paso? Puede que utilicemos un valor muy pequeño lo que creara cálculos innecesarios o muy grande que creará posibles errores. Para esto se ha creado el método de Runge Kutta con pasos adaptivos.
+
+Por ejemplo, se puede calcular el valor del siguiente paso usando $\Delta t$ y $2 \Delta t$. Si la diferencia entre estos valores es muy pequeña, se puede reemplazar el valor de $\Delta t$ por $2 \Delta t$ en el siguiente paso. Si la diferencia es muy grande, se puede optar por calcular el valor con $(\Delta t)/2$ y de la misma manera si el valor es muy grande, se puede reemplazar el valor de $\Delta t$ para el siguiente paso.
 
 
-```{note}
-My directive content
-```
+``````{seealso}
+Hay muchos recursos online sobre este método, aquí unas sugerencias:
+ * [Runge Kutta method with adaptive step size - Let's Code Physics](https://www.youtube.com/watch?v=JcRsGD2pKlA)
+``````
+
+Veamos este ejemplo gráficamente:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
+
+``````{admonition} Take home message
+:class: tip
+Los métodos de Runge Kutta nos permiten calcular analíticamente la solución de ecuaciones diferenciales de una manera muy precisa. 
+``````
