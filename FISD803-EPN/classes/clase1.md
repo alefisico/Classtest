@@ -71,11 +71,11 @@ Notese que la precisión de este método depende del tamaño de este paso.
 
 ![Euler method simple demostration](../images/clase1/Euler_method.svg)
 
-Matemáticamente, dados las condiciones iniciales $t_0$ y $y(t_0)$ y conociendo que la derivada de $y$ es una función de $t$ y $y$, o $\frac{dy}{dt} = f(t, y(t))$, este método comienza con $y_0 = y(t_0)$ y un tamaño del paso $h$. Se puede definir tambien que $t_n = t_0 +nh$ o equivalentemente $t_{n+1} = t_n +h$, donde $n$ es el número del paso.  Así, para un paso se tiene que:
+Matemáticamente, dados las condiciones iniciales $t_0$ y $y(t_0)$ y conociendo que la derivada de $y$ es una función de $t$ y $y$, o $\frac{dy}{dt} = f(t, y(t))$, este método comienza con $y_0 = y(t_0)$ y un tamaño del paso $h$. Se puede definir tambien que $t_n = t_0 +nh$ o equivalentemente $t_{n+1} = t_n + \Delta t $, donde $n$ es el número del paso.  Así, para un paso se tiene que:
 
 ```{math}
 :label: eulereq
-y_{n+1} = y_n + h f(t_n, y_n)
+y_{n+1} = y_n + \Delta t f(t_n, y_n)
 ```
 
 que es el valor aproximado de la solución de la ecuación al tiempo $t_n$.
@@ -87,26 +87,22 @@ Consideremos la siguiente ecuación diferencial:
 
 $$ \frac{dy}{dx} = ( x + y ) $$
 
-y las condiciones iniciales $x_o = 0$, $y_0 = 1$, $h = 0.025$. Entonces:
+y las condiciones iniciales $x_0 = 0$, $y_0 = 1$, $\Delta t = 0.025$. Entonces:
 
-$$
+\begin{gather*}
 f(x, y(x)) = x + y
-f(0, 1) = 0 + 1 = 1
-y_1 = y_0 + h f( x_0, y_0) = 1 + 0.025 (1) = 2.025
-$$
-
+f(x_0, y(x_0)) = f(0, 1) = 0 + 1 = 1
+y_1 = y_0 + \Delta t f( x_0, y_0) = 1 + 0.025 (1) = 2.025
+\end{gather*}
 
 ````
 
 Veamos este ejemplo gráficamente:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alefisico/FISD803-EPN/blob/main/FISD803-EPN/classes/clase1.ipynb)
 
-Empecemos con un ejemplo simple:
+#### Método de Runge Kutta
 
-\begingroup
-\fontfamily{ppl}\fontsize{20}{22}\selectfont
-$$ \frac{dx}{dz} $$
-\endgroup
+Este es el método más utilizado en resolver ecuaciones diferenciales. Existen métodos más sofisticados pero Runge Kutta sigue siendo el método general. En esta parte vamos a describir el método de cuarto orden (RK4) porque vamos a calcular *cuatro* pendientes y sumarlas con un promedio ponderado.
 
 
 ```{note}
